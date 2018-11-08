@@ -1,0 +1,101 @@
+
+body {
+    background-color: khaki;
+}
+
+.tdWaiting {
+    padding-right: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.tdEaten {
+    padding-right: 5px;
+    color: #444;
+}
+
+#PageTitle {
+    font-weight: bold;
+    font-size: 5rem;
+    color: darkred;
+}
+
+.DevourButton {
+    margin: 5px;
+    height: 20px;
+    padding-top: 0px;
+    padding-bottom: 2px;
+    background-color: darkred;
+    color:white;
+}
+
+.DevourButton:hover {
+    color: white;
+    /* height: 35px; */
+    /* height: 25px; */
+    width: 90px;
+    margin-left: 15px;
+    /* margin-top: 5px; */
+}
+
+#myCanvas {
+    background-color: red;
+}
+
+#BurgerImg1 {
+    width: 100px;
+    position: relative;
+    left: 20%;
+    animation: burgermove1 4s infinite;
+    animation-direction: alternate; 
+}
+
+#BurgerImg2 {
+    width: 100px;
+    position: relative;
+    left: 60%;
+    animation: burgermove2 4s infinite;
+    animation-direction: alternate; 
+}
+
+#AddButton {
+    background-color: darkgreen;
+    color: white;
+    margin-bottom: 20px;
+}
+
+#ListWait {
+    list-style-type: none;
+}
+
+#ListAte {
+    list-style-type: none;
+}
+
+@keyframes burgermove1 {
+    0% {
+        transform: translate(0, 0);
+    }
+    50% {
+    }
+    90% {
+    }
+    100% {
+        transform: translate(600%);
+        /* transform: skewY(-30deg); */
+    }
+}
+
+@keyframes burgermove2 {
+    0% {
+        transform: translate(0, 0);
+    }
+    50% {
+    }
+    90% {
+    }
+    100% {
+        transform: translate(-600%);
+        /* transform: skewY(-30deg); */
+    }
+}

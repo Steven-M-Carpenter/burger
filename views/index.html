@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Eat Da Burger</title>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- <link rel="stylesheet" href="assets/css/style.css"> -->
+
+</head>
+
+<body>
+    <!-- <div class="jumbotron">
+        <h1 class="display-4">Hello, world!</h1>
+        <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to
+            featured content or information.</p>
+        <hr class="my-4">
+        <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+        <p class="lead">
+            <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+        </p>
+    </div> -->
+    <div class="container">
+        <div class="row">
+            <header class="col-sm-12">
+                <h1 class="text-center" id="PageTitle">Eat Da Burger</h1>
+            </header>
+        </div>
+        <div class="row">
+            <div class="col-lg-2">
+            </div>
+            <div class="col-lg-4">
+                <h2 class="text-center" id="BurgerWait">Burgers waiting for you</h2>
+            </div>
+            <div class="col-lg-4">
+                <h2 class="text-center" id="BurgerAte">Burgers you have eaten</h2>
+            </div>
+            <div class="col-lg-2">
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <ul id="ListWait">
+        {{#each burgers}}
+        {{#unless devoured}}
+        <li>{{id}} {{burger_name}}</li>
+        {{/unless}}
+        {{/each}}
+    </ul>
+
+
+    <ul id="ListAte">
+        {{#each burgers}}
+        {{#if devoured}}
+        <li>{{id}} {{burger_name}}</li>
+        {{/if}}
+        {{/each}}
+    </ul>
+
+    <h2 id="BurgerAdd">Add a Burger</h2>
+    <form class="create-form">
+        <div class="form-group">
+            <label id="BurgerNamePrompt" for="nb">Burger Name:</label>
+            <input id="BurgerNameInput" type="text" id="nb" name="name">
+        </div>
+        <button id="AddButton" type="submit">Add Burger</button>
+    </form>
+</body>
+
+</html>
