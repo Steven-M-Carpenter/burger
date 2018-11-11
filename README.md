@@ -21,3 +21,9 @@ The application require the usage of the following libraries
 * Access the application on Heroku
 * You will be presented with the primary interface page
 * You can choose to add a new burger or devour and existing burger
+
+### Link
+The link below will allow you to access the application from your browser:
+
+    http://pure-plains-52371.herokuapp.com/ 
+
