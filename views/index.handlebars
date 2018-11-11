@@ -1,22 +1,13 @@
-{{!-- <div class="jumbotron">
-    <h1 class="display-4">Hello, world!</h1>
-    <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to
-        featured content or information.</p>
-    <hr class="my-4">
-    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-    <p class="lead">
-        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-    </p>
-</div> --}}
+{{!--------------------------------------------------------- 
+    Define the main presentaion component
+ ---------------------------------------------------------------}}
 <div class="container">
     <div class="row">
         <header class="col-sm-12">
             <h1 class="text-center" id="PageTitle">Eat Da Burger</h1>
         </header>
-        {{!-- <svg id="myCanvas" width=100% height="100"> --}}
         <img id="BurgerImg1" src="assets/images/Anonymous-burger.svg" alt="Picture of a burger">
         <img id="BurgerImg2" src="assets/images/Anonymous-burger.svg" alt="Picture of a burger">
-        {{!-- </svg> --}}
     </div>
     <div class="row">
         <div class="col-sm-1">
@@ -36,13 +27,6 @@
         <div class="col-sm-1">
         </div>
         <div class="col-sm-4">
-            {{!-- <ul id="ListWait">
-                {{#each burgers}}
-                {{#unless devoured}}
-                <li>{{id}}. {{burger_name}} <button class="DevourButton btn btn-sm" type="button" data-id="{{id}}">Devour It!</button></li>
-                {{/unless}}
-                {{/each}}
-            </ul> --}}
             <table>
                 {{#each burgers}}
                 {{#unless devoured}}
@@ -59,17 +43,14 @@
         </div>
         <div class="col-sm-4">
             <table>
-            {{!-- <ul id="ListAte"> --}}
                 {{#each burgers}}
                 {{#if devoured}}
-                {{!-- <li>{{id}}. {{burger_name}}</li> --}}
                 <tr>
                     <td class="tdEaten">{{id}}.</td>
                     <td class="tdEaten">{{burger_name}}</td>
                 </tr>
                 {{/if}}
                 {{/each}}
-            {{!-- </ul> --}}
             </table>
         </div>
         <div class="col-sm-1">

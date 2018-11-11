@@ -1,8 +1,13 @@
-
+/* =========================================================== */
+/* Elements */
+/* =========================================================== */
 body {
     background-color: khaki;
 }
 
+/* =========================================================== */
+/* Classes */
+/* =========================================================== */
 .tdWaiting {
     padding-right: 5px;
     padding-top: 2px;
@@ -12,12 +17,6 @@ body {
 .tdEaten {
     padding-right: 5px;
     color: #444;
-}
-
-#PageTitle {
-    font-weight: bold;
-    font-size: 5rem;
-    color: darkred;
 }
 
 .DevourButton {
@@ -36,6 +35,15 @@ body {
     width: 90px;
     margin-left: 15px;
     /* margin-top: 5px; */
+}
+
+/* =========================================================== */
+/* IDs */
+/* =========================================================== */
+#PageTitle {
+    font-weight: bold;
+    font-size: 5rem;
+    color: darkred;
 }
 
 #myCanvas {
@@ -71,6 +79,10 @@ body {
 #ListAte {
     list-style-type: none;
 }
+
+/* =========================================================== */
+/* Animation drivers */
+/* =========================================================== */
 
 @keyframes burgermove1 {
     0% {

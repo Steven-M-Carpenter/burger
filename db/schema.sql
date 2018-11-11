@@ -1,6 +1,8 @@
+-- Do no use the CREATE	and USE functions for Heroku deployment
+----------------------------------------------------------------
 CREATE DATABASE burgers_db;
-
 USE burgers_db;
+----------------------------------------------------------------
 
 CREATE TABLE burgers
 (
@@ -9,4 +11,3 @@ CREATE TABLE burgers
 	devoured boolean NOT NULL DEFAULT 0,
 	PRIMARY KEY (id)
 );
-

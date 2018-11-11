@@ -1,46 +1,51 @@
+//=================================================================
+// Process all events for the application user interface
+//=================================================================
 $(function () {
+    //=================================================================
+    // Detect when the user chooses to devour a burger
+    //=================================================================
     $(".DevourButton").on("click", function (event) {
         var id = $(this).data("id");
         var newStatus = {
             devoured: true
         }
-        console.log("======================================");
-        console.log("burgers.js ID = " + id);
-        console.log("======================================");
-        // Send the DELETE request.
+        //=================================================================
+        // Make the PUT request to update the burger status
+        //=================================================================
         $.ajax("/api/burgers/" + id, {
             type: "PUT",
             data: newStatus
         }).then(
             function () {
-                console.log("Set devoured to true for id ", id);
+                //=================================================================
                 // Reload the page to get the updated list
+                //=================================================================
                 location.reload();
             }
         );
     });
 
 
+    //=================================================================
+    // Detect when the user chooses to add another a burger
+    //=================================================================
     $("#AddButton").on("click", function (event) {
-        // Make sure to preventDefault on a submit event.
-        console.log("======================================");
-        console.log("Add Button Triggered");
-        console.log("======================================");
         event.preventDefault();
         var newBurger = {
             name: $("#BurgerNameInput").val().trim()
         };
-        console.log("======================================");
-        console.log("burgers.js newBurger.name = " + newBurger.name);
-        console.log("======================================");
-        // Send the POST request.
+        //=================================================================
+        // Make the POST request to add the burger
+        //=================================================================
         $.ajax("/api/burgers", {
             type: "POST",
             data: newBurger
         }).then(
             function () {
-                console.log("Created new burger");
+                //=================================================================
                 // Reload the page to get the updated list
+                //=================================================================
                 location.reload();
             }
         );
